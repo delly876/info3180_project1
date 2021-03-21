@@ -1,3 +1,247 @@
 body {
     padding-top: 50px;
+    background-color: #e9e9e9;
+}
+
+h2{
+    font-weight: bold;
+    padding: 30px 0px 10px 0px;
+}
+
+.fa-home{
+    color: #ffffff;
+    padding-right: 10px;
+}
+
+form{
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: auto;
+    width: 800px;
+    border-radius: 15px;
+    padding: 10px 100px 20px 30px;
+}
+
+.headings{
+    font-weight: bold;
+    padding-top: 10px;
+}
+
+.section1, .section2{
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+    align-items: center;
+}
+
+.break1{
+    display: flex;
+    flex-direction: column;
+}
+
+.break2{
+    display: flex;
+    flex-direction: column;
+}
+
+.break3{
+    display: flex;
+    flex-direction: column;
+}
+.break4{
+    display: flex;
+    flex-direction: column;
+}
+
+.type{
+    background: #FFF;
+    color: #525252;
+    font-weight: 300;
+    border-radius: 2px;
+    box-shadow: 0 1px 1px rgba(123, 123, 123, 0.2);
+    border: solid 1px #DADADA;
+    font-family: 'helvetica neue',arial;
+    padding: 5px 100px 5px 5px;
+}
+
+.type2{
+    background: #FFF;
+    color: #525252;
+    font-weight: 300;
+    border-radius: 2px;
+    box-shadow: 0 1px 1px rgba(123, 123, 123, 0.2);
+    border: solid 1px #DADADA;
+    font-family: 'helvetica neue',arial;
+    cursor: pointer;
+    padding: 7.5px 197px 7.5px 7.5px;
+}
+
+.type3{
+    background: #FFF;
+    color: #525252;
+    font-weight: 300;
+    border-radius: 2px;
+    box-shadow: 0 1px 1px rgba(123, 123, 123, 0.2);
+    border: solid 1px #DADADA;
+    font-family: 'helvetica neue',arial;
+    padding: 5px;
+    width: 300px;
+}
+
+.type4{
+    background: #FFF;
+    color: #525252;
+    font-weight: 300;
+    border-radius: 2px;
+    box-shadow: 0 1px 1px rgba(102, 102, 102, 0.2);
+    font-family: 'helvetica neue',arial;
+    padding: 5px;
+    width: 230px;
+}
+
+button{
+    width: 150px;
+    margin-top: 10px;
+}
+
+img{
+    width: 300px;
+    height: 200px;
+}
+
+.holder{
+    padding: 10px;
+    display: inline-block;
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(102, 102, 102, 0.2);
+    overflow: hidden;
+}
+
+#price2{
+    background-color: #418aff;
+    color: #ffffff;
+    border-radius: 25px;
+    text-align: center;
+    width: 100px;
+    margin-top: 10px;
+    padding: 3px;
+    font-size: smaller;
+    margin: 10px 0px 20px 12px
+}
+
+#name2{
+    font-weight: bold;
+    margin-left: 12px;
+    margin-top: 12px;
+}
+
+#loc{
+    color: #969696;
+    margin-top: 0px;
+    margin-left: 12px;
+    font-size: smaller;
+
+}
+
+.viewprop{
+    background-color: #00cfbb;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: smaller;
+    width: 300px;
+    height: 40px;
+    border: none;
+    margin: none;
+    cursor: pointer;
+    text-align: center;
+}
+
+.specmain{
+    width: 800px;
+    height: 250px;
+    margin-top: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    border-radius: 10px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 5px rgba(102, 102, 102, 0.2);
+    overflow: hidden;
+}
+
+.specmain img{
+    height: 250px;
+}
+
+.right{
+    padding: 10px 20px 0px 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.name3{
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.set1{
+    display: flex;
+    justify-content: space-between;
+    width: 200px;
+    padding: 10px 0px 10px 0px;
+}
+.blue{
+    background-color: #418aff;
+    color: #ffffff;
+    border-radius: 20px;
+    font-size: x-small;
+    font-weight: bold;
+    padding: 5px 20px 5px 20px;
+    text-align: center;
+    width: auto;
+}
+
+.yellow{
+    background-color: #ffcc41;
+    color: #ffffff;
+    border-radius: 20px;
+    font-size: x-small;
+    font-weight: bold;
+    padding: 5px 20px 5px 20px;
+    text-align: center;
+    width: auto;
+}
+
+.text3{
+    font-size: 13px;
+}
+
+.set2{
+    display: flex;
+    margin-top: 8px;
+    justify-content: space-between;
+    width: 250px;
+}
+
+.loc2{
+    margin-top: 5px;
+    margin-left: 3px;
+}
+
+.btntoemail{
+    background-color: #00cfbb;
+    color: #ffffff;
+    font-size: 14px;
+    width: 100px;
+    border: none;
+    border-radius: 4px;
+    padding: 3px 5px 3px 5px;
 }

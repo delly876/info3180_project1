@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block main %}
+
+<h2>Properties</h2>
+<ul>
+    {% for item in property %}
+    <div class='holder'>
+        <div class='card'>
+            <img src="{{ url_for('get_image', filename = item.filename) }}" />
+            <div id='name2'>
+                {{ item.name }}
+            </div>
+            <div id='loc'>
+                <i class="fas fa-map-marker-alt"></i>
+                {{ item.location }}
+            </div>
+            <div id='price2'>
+                {{ item.price }}
+            </div>
+            <div class='atedit'>
+                <a href="{{ url_for('get_property', propertyid = item.id) }}">
+                    <button type="submit" name="submit" class="viewprop">View Property</button>
+                </a>
+            </div>
+        </div>
+    </div>
+    
+    {% endfor %}
+    
+</ul>
+
+{% endblock %}

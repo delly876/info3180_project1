@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+
+{% block main %}
+
+<div class = 'specmain'>
+    <div class='left'>
+        <img src="{{ url_for('get_image', filename = specific.filename) }}" />
+    </div>
+    <div class='right'>
+        <div class='name3'>
+            {{ specific.name }}
+        </div>
+
+        <div class ='set1'>
+            <div class = 'blue'>
+                {{ specific.price }}
+            </div>
+            <div class = 'yellow'>
+                {{ specific.type }}
+            </div>
+        </div>
+
+        <div class='text3'>
+            {{ specific.description }} 
+        </div>
+
+        <div class ='set2'>
+            <div class = 'count1'>
+                <i class="fas fa-couch"></i>
+                {{ specific.norooms }} Bedrooms
+            </div>
+            <div class = 'count2'>
+                <i class="fas fa-toilet"></i>
+                {{ specific.nobath }} Bathrooms
+            </div>
+        </div>
+        
+        <div class='loc2'>
+            <i class="fas fa-map-marker-alt"> </i>
+            {{ specific.location }}
+        </div>
+        
+        <button type="submit" name="submit" class="btntoemail">Email Realtor</button>
+    </div>
+    
+</div>
+    
+
+{% endblock %}

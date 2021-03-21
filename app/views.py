@@ -4,10 +4,13 @@ Jinja2 Documentation:    http://jinja.pocoo.org/2/documentation/
 Werkzeug Documentation:  http://werkzeug.pocoo.org/documentation/
 This file creates your application.
 """
-
-from app import app
-from flask import render_template, request, redirect, url_for
-
+import os
+from app import app, db
+from flask import render_template, request, redirect, url_for, flash
+from werkzeug.utils import secure_filename
+from app.forms import PropertyForm
+from app.models import Property
+from flask.helpers import send_from_directory
 
 ###
 # Routing for your application.
@@ -24,6 +27,37 @@ def about():
     """Render the website's about page."""
     return render_template('about.html', name="Mary Jane")
 
+@app.route('/property', methods=["GET", "POST"])
+def property():
+    form = PropertyForm()
+
+    if form.validate_on_submit():
+        photo = form.photo.data
+        filename = secure_filename(photo.filename)
+        photo.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
+        property = Property(form.name.data, form.nobed.data, form.nobath.data, form.location.data, form.price.data, form.type.data, form.description.data, filename)
+        db.session.add(property)
+        db.session.commit()
+        flash('Property Successfully Added', 'success')
+        return redirect(url_for("properties"))
+
+    return render_template('property.html', form=form)
+
+    
+
+@app.route('/properties')
+def properties():
+    property = db.session.query(Property).all()
+    return render_template('properties.html', property=property)
+
+@app.route('/uploads/<filename>')
+def get_image(filename):
+    return send_from_directory(app.config['UPLOAD_FOLDER'], filename)
+
+@app.route('/property/<propertyid>')
+def get_property(propertyid):
+    specific = Property.query.get(propertyid)
+    return render_template('specific.html', specific=specific)
 
 ###
 # The functions below should be applicable to all Flask apps.
